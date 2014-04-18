@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SCRAPBOOK</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div id="tools">
+        <button type="button" class="picker-btn" data-type="photo">Add Photo</button>
+        <button type="button" class="picker-btn" data-type="image">Add Image</button>
+        <button type="button" class="picker-btn" data-type="map">Add Map</button>
+        <button type="button" class="picker-btn" data-type="video">Add Video</button>
+        <button type="button" class="picker-btn" data-type="recording">Add Recording</button>
+        <input type="text" placeholder="Type your text" id="input-text" />
+        <button type="button" class="picker-btn" data-type="text">Add Text</button>
+        <button type="button" class="picker-btn" data-type="draw">Add Drawing</button>
+        <button type="button" class="picker-btn" data-type="save">Save</button>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="js/libs/purl.js"></script>
+    <script src="js/libs/fabric.min.js"></script>
+
+    <script src="js/common.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/picker.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+
+    window.onload = function(){
+        $.getScript( "https://apis.google.com/js/api.js?onload=onGoogleApiLoad"); //load google apis
+    }
+
+    function onGoogleApiLoad() { //initialize site
+        mainModule.init();
+    }
+
+    </script>
+</body>
+</html>
